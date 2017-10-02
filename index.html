@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Wraith Food</title>
+    <title>Wraith Food</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- jquery link -->
@@ -11,7 +12,63 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
 </head>
-<body>
 
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" id="pgName" href="#">Wraith Food</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" class="navlinks" id="instructions">Instructions</a></li>
+                    <li><a href="#" class="navlinks" id="reset">Reset</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="divbgpic">
+                    <img id="mainPic" class="img-responsive" src="assets/images/wrong1.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="divbg">
+                    <p id="word">_ _ _ _ _ _ _</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="divbg">
+                    <p id="lettersGuessed">Letters guessed: </p>
+                    <hr>
+                    <p id="guessesLeft">Guesses left: </p>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="divbg">
+                    <p>Scoreboard</p>
+                    <p id="wins">Wins: 0</p>
+                    <p id="losses">Losses: 0</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

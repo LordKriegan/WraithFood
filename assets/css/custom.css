@@ -1,0 +1,41 @@
+html, body {
+	height: 100%;
+}
+body {
+	background-image: url("../images/background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#navigation,.navbar, .navbar-default {
+  background: rgba(102, 102, 102, 0.4);
+  border-radius: 15px;
+}
+
+.divbg {
+	border-style: groove;
+	border-width: 1px;
+	border-radius: 15px;
+	background: rgba(102, 102, 102, 0.4);
+	padding: 5px;
+	margin: 5px;
+	color: black;
+}
+
+.divbgpic {
+	border-style: groove;
+	border-width: 1px;
+	border-radius: 15px;
+	margin: 5px;
+}
+
+
+#word {
+	text-align: center;
+	line-height: 3;
+}
+#mainPic {
+	border-radius: 15px;
+	margin: 0;
+	opacity: 0.8;
+}
