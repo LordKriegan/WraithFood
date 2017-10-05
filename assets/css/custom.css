@@ -1,21 +1,10 @@
-html, body {
-	height: 100%;
+/*https://css-tricks.com/perfect-full-page-background-image/*/
+html { 
+  background: url(../images/background.jpg) no-repeat center center fixed; 
+  background-size: cover;
 }
-/*
 body {
-	background-image: url("../images/background.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}*/
-
-.bg { 
-    /* The image used */
-    background-image: url("../images/background.jpg");
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background: rgba(0, 0, 0 , 0);
 }
 
 #navigation,.navbar, .navbar-default {
