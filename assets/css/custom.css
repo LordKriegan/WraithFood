@@ -44,6 +44,7 @@ body {
 #word {
 	text-align: center;
 	line-height: 3;
+	letter-spacing: 7px;
 }
 #mainPic {
 	border-radius: 15px;
