@@ -37,9 +37,6 @@ var game = {
         //update page to reflect current state of word and letters guessed
         document.getElementById("lettersGuessed").innerHTML = game.guessedLets;
         document.getElementById("word").innerHTML = game.wordHTML;
-        if (!(game.wordHTML.includes("_"))) {
-            game.endGame();
-        }
     }
 };
 
@@ -52,6 +49,10 @@ window.onload = function() {
         //we check for upper A and Z instead of lower.
         if ((event.keyCode >= 65) && (event.keyCode <= 90)) {
             game.checkLet(event.key);
+        }
+        //if wordhtml is same as currentword end the game
+        if (game.wordHTML === game.currentWord) {
+            game.endGame();
         }
     };
 };
