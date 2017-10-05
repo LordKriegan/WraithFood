@@ -21,7 +21,7 @@ var game = {
             console.log("This if statement needs to update guesses remaining, and change picture");
         }
         //just end the current function if they already guessed this letter
-        else if (game.guessedLets.includes(letter)) {
+        if (game.guessedLets.includes(letter)) {
         	return;
         }
         //otherwise update blanks to correctly guessed letters 
