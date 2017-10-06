@@ -13,6 +13,7 @@ body {
 }
 
 .divbg {
+	text-align: center;
 	border-style: groove;
 	border-width: 1px;
 	border-radius: 15px;
@@ -31,7 +32,6 @@ body {
 
 
 #word {
-	text-align: center;
 	line-height: 3;
 	letter-spacing: 7px;
 }
