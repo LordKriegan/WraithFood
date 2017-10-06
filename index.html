@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
-
     <!-- jquery link -->
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
@@ -17,7 +16,6 @@
 </head>
 
 <body>
-    <div class="bg">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -28,19 +26,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" id="pgName" href="#">Wraith Food</a>
+                <a class="navbar-brand" href="#">Wraith Food</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" class="navlinks" id="instructions">Instructions</a></li>
-                    <li><a href="#" class="navlinks" id="reset">Reset</a></li>
+                    <li><a href="#" id="btnInstr">Instructions</a></li>
+                    <li><a href="#" id="btnReset">Reset</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
+    <div id="instrOverlay">
+        <div id="instructions" class="divbg">
+            Your mission objective is to correctly guess the word this Wraith Queen is thinking. Press any letter on your keyboard to guess a letter. You can get up to 8 letters wrong. If you are incorrect any more than that, than she will suck all the life out of Colonel Sumner. You don't want to be responsible for his death, do you? Click anywhere on the screen to go back to the main screen.
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -73,8 +76,6 @@
             </div>
         </div>
     </div>
-</div>
-
 </body>
 
 </html>

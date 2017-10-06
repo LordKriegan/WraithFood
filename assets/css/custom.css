@@ -29,7 +29,26 @@ body {
 	border-radius: 15px;
 	margin: 5px;
 }
-
+#instrOverlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left; 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0);
+	z-index: 1;
+}
+#instructions {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 50%;
+	height: 50%;
+}
 
 #word {
 	line-height: 3;
