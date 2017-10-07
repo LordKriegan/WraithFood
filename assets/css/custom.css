@@ -13,6 +13,8 @@ body {
 }
 
 .divbg {
+	font-family: 'Roboto', 'Georgia', Times, Times New Roman, serif;
+	font-size: 20px;
 	text-align: center;
 	border-style: groove;
 	border-width: 1px;
@@ -29,6 +31,7 @@ body {
 	border-radius: 15px;
 	margin: 5px;
 }
+
 #instrOverlay {
 	display: none;
 	position: fixed;

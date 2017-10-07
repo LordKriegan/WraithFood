@@ -9,7 +9,7 @@ var game = {
         game.setWord();
         game.guessesLeft = 9;
         game.guessedLets = ""
-        document.getElementById("mainPic").src = "assets/images/wrong9.png";
+        document.getElementById("mainPic").src = "assets/images/wrong9.jpg";
         document.getElementById("lettersGuessed").innerHTML = "";
         document.getElementById("guessesLeft").innerHTML = "8";
     },
@@ -41,7 +41,7 @@ var game = {
         if (!(game.currentWord.includes(letter)) && !(game.guessedLets.includes(letter))) {
             if (game.guessesLeft > 0) {
                 game.guessesLeft--;
-                document.getElementById("mainPic").src = "assets/images/wrong" + game.guessesLeft + ".png";
+                document.getElementById("mainPic").src = "assets/images/wrong" + game.guessesLeft + ".jpg";
                 document.getElementById("guessesLeft").innerHTML = game.guessesLeft - 1;
             }
         }
@@ -92,7 +92,7 @@ window.onload = function() {
             var gameAudio = document.createElement("audio");
             gameAudio.src = "assets/audio/winner.mp3";
             gameAudio.play();
-            document.getElementById("mainPic").src = "assets/images/winner.png";
+            document.getElementById("mainPic").src = "assets/images/winner.jpg";
             document.getElementById("word").innerHTML = "Congratulations! You got it! Press any key to continue!";
             return;
         }
@@ -101,7 +101,7 @@ window.onload = function() {
             var gameAudio = document.createElement("audio");
             gameAudio.src = "assets/audio/loser.mp3";
             gameAudio.play();
-            //losing picture is taken care of at checkLet (wrong1.png)
+            //losing picture is taken care of at checkLet (wrong1.jpg)
             document.getElementById("word").innerHTML = "Game Over! Press any key to continue!";
             return;
         }
