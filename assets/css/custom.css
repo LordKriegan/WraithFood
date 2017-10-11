@@ -12,6 +12,14 @@ body {
   border-radius: 15px;
 }
 
+.centerContainer {
+	position: fixed;
+	top: 25%;
+	bottom: 25%;
+	left: 0;
+	right: 0;
+}
+
 .divbg {
 	font-family: 'Roboto', 'Georgia', Times, Times New Roman, serif;
 	font-size: 20px;
