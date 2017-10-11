@@ -51,7 +51,7 @@ var game = {
         }
         //otherwise update blanks to correctly guessed letters 
         else {
-            for (i = 0; i < game.currentWord.length; i++) {
+            for (var i = 0; i < game.currentWord.length; i++) {
                 if (game.currentWord.charAt(i) === letter) {
                     game.wordHTML = game.wordHTML.substr(0, i) + letter + game.wordHTML.substr(i + 1);
                 }
@@ -93,7 +93,7 @@ window.onload = function() {
             gameAudio.src = "assets/audio/winner.mp3";
             gameAudio.play();
             document.getElementById("mainPic").src = "assets/images/winner.jpg";
-            document.getElementById("word").innerHTML = "Congratulations! You got it! Press any key to continue!";
+            document.getElementById("word").innerHTML = game.currentWord + "<br>Congratulations! You got it! Press any key to continue!";
             return;
         }
         if (game.guessesLeft === 1) {
@@ -102,7 +102,7 @@ window.onload = function() {
             gameAudio.src = "assets/audio/loser.mp3";
             gameAudio.play();
             //losing picture is taken care of at checkLet (wrong1.jpg)
-            document.getElementById("word").innerHTML = "Game Over! Press any key to continue!";
+            document.getElementById("word").innerHTML = game.currentWord + "<br>Game Over! Press any key to continue!";
             return;
         }
 
