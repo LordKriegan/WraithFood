@@ -15,15 +15,7 @@ var game = {
     },
     setWord: function() {
         game.currentWord = wordlist[Math.floor(Math.random() * wordlist.length)];
-        game.wordHTML = "";
-        for (var i = 0; i < game.currentWord.length; i++) {
-            if (game.currentWord[i] === " ") {
-                game.wordHTML += " ";
-            }
-            else {
-                game.wordHTML += "_";
-            }
-        }
+        game.wordHTML = game.currentWord.replace(/[a-z]/gi, "_");
         document.getElementById("word").innerHTML = game.wordHTML;
     },
     endGame: function(isGameWon) {
@@ -37,8 +29,11 @@ var game = {
         game.resetBoard();
     },
     checkLet: function(letter) {
+        //convert everything to lowercase for comparison purposes
+        letter = letter.toLowerCase()
+        var tempWord = game.currentWord.toLowerCase();
         //if letter isnt in word or already guessed update gamestate accordingly
-        if (!(game.currentWord.includes(letter)) && !(game.guessedLets.includes(letter))) {
+        if (!(tempWord.includes(letter)) && !(game.guessedLets.includes(letter))) {
             if (game.guessesLeft > 0) {
                 game.guessesLeft--;
                 document.getElementById("mainPic").src = "assets/images/wrong" + game.guessesLeft + ".jpg";
@@ -52,8 +47,8 @@ var game = {
         //otherwise update blanks to correctly guessed letters 
         else {
             for (var i = 0; i < game.currentWord.length; i++) {
-                if (game.currentWord.charAt(i) === letter) {
-                    game.wordHTML = game.wordHTML.substr(0, i) + letter + game.wordHTML.substr(i + 1);
+                if (tempWord.charAt(i) === letter) {
+                    game.wordHTML = game.wordHTML.substr(0, i) + game.currentWord.charAt(i) + game.wordHTML.substr(i + 1);
                 }
             }
         }
